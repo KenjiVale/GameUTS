@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World_Complete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tileSet.tres" type="TileSet" id=3]
+[ext_resource path="res://Octopus.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Life.tscn" type="PackedScene" id=5]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Coinjml.tscn" type="PackedScene" id=7]
+[ext_resource path="res://world.gd" type="Script" id=8]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 56.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 48.0
+
+[node name="Node" type="Node"]
+script = ExtResource( 8 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 3 )
+collision_use_kinematic = true
+format = 1
+tile_data = PoolIntArray( 327681, 0, 0, 327682, 0, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 2, 0, 393217, 3, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393224, 4, 0, 393225, 4, 0, 393226, 4, 0, 393227, 4, 0, 393228, 4, 0, 393229, 5, 0, 458753, 3, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458760, 4, 0, 458761, 4, 0, 458762, 4, 0, 458763, 4, 0, 458764, 4, 0, 458765, 5, 0, 524303, 0, 0, 524304, 1, 0, 524305, 1, 0, 589839, 6, 0, 589840, 7, 0, 589841, 8, 0, 655379, 0, 0, 655380, 1, 0, 655381, 2, 0, 720915, 6, 0, 720916, 7, 0, 720917, 8, 0, 786459, 0, 0, 786460, 1, 0, 786461, 2, 0, 851995, 6, 0, 851996, 7, 0, 851997, 8, 0, 1048584, 0, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 2, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 1, 0, 1048605, 1, 0, 1048606, 1, 0, 1048607, 1, 0, 1048608, 1, 0, 1114120, 6, 0, 1114121, 7, 0, 1114122, 7, 0, 1114123, 7, 0, 1114124, 7, 0, 1114125, 7, 0, 1114126, 7, 0, 1114127, 7, 0, 1114128, 7, 0, 1114129, 7, 0, 1114130, 7, 0, 1114131, 7, 0, 1114132, 7, 0, 1114133, 7, 0, 1114134, 8, 0 )
+
+[node name="coins" type="Node2D" parent="."]
+
+[node name="coin" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 471, 476 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="coin2" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 562, 476 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="coin3" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 660, 476 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="coin4" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 657.172, 281.546 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="coin5" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 524.236, 208.007 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="coin6" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 343.956, 50.3795 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="World_Complete" parent="." instance=ExtResource( 2 )]
+world_scene = "res://world2.tscn"
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 280, 456 )
+
+[node name="Octopus" parent="." instance=ExtResource( 4 )]
+position = Vector2( 208, 40 )
+
+[node name="Area2D" type="Area2D" parent="Octopus"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Octopus/Area2D"]
+position = Vector2( 0, -8 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Octopus"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Octopus/KinematicBody2D"]
+position = Vector2( 0, -8 )
+shape = SubResource( 2 )
+
+[node name="Life" parent="." instance=ExtResource( 5 )]
+
+[node name="Coinjml" parent="." instance=ExtResource( 7 )]
+
+[connection signal="body_entered" from="Octopus/Area2D" to="Octopus" method="_on_Area2D_body_entered"]

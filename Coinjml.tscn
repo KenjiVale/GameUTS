@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://coin/c1.png" type="Texture" id=1]
+[ext_resource path="res://Coinjml.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+
+[node name="Coinjml" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1024.0
+margin_top = 32.0
+margin_right = -984.0
+margin_bottom = 72.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+margin_left = 915.376
+margin_top = 27.0163
+margin_right = 955.376
+margin_bottom = 67.0163
+rect_scale = Vector2( 1.65083, 0.901204 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="point" type="Label" parent="Control/Panel"]
+margin_left = -9.53888
+margin_top = 7.73244
+margin_right = 30.4612
+margin_bottom = 21.7324
+rect_scale = Vector2( 1.01441, 1.72385 )
+text = "0"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="TextureRect" parent="Control"]
+margin_left = 879.66
+margin_top = 18.6877
+margin_right = 3112.66
+margin_bottom = 2261.69
+rect_scale = Vector2( 0.0235886, 0.0235886 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

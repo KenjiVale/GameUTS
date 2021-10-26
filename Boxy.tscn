@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=2]
+
+[sub_resource type="StreamTexture" id=10]
+flags = 4
+load_path = "res://.import/Boxy_walk.png-0bd2aeb7821f7603935240c1e25d82a8.stex"
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = SubResource( 10 )
+region = Rect2( 0, 0, 980, 700 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = SubResource( 10 )
+region = Rect2( 980, 0, 980, 700 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = SubResource( 10 )
+region = Rect2( 1960, 0, 980, 700 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = SubResource( 10 )
+region = Rect2( 2940, 0, 980, 700 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = SubResource( 10 )
+region = Rect2( 3920, 0, 980, 700 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = SubResource( 10 )
+region = Rect2( 4900, 0, 980, 700 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = SubResource( 10 )
+region = Rect2( 5880, 0, 980, 700 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = SubResource( 10 )
+region = Rect2( 5880, 0, 980, 700 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[node name="Node" type="Node"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 468.704, 333.875 )
+scale = Vector2( 1.04524, 0.855684 )
+frames = SubResource( 8 )
+animation = "Idle"
+offset = Vector2( 219.069, -39.9421 )
