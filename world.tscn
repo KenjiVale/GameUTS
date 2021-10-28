@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World_Complete.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Coinjml.tscn" type="PackedScene" id=7]
 [ext_resource path="res://world.gd" type="Script" id=8]
+[ext_resource path="res://jatuh.gd" type="Script" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 56.0
@@ -15,50 +16,71 @@ radius = 56.0
 [sub_resource type="CircleShape2D" id=2]
 radius = 48.0
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2205.73, 40.0667 )
+
 [node name="Node" type="Node"]
 script = ExtResource( 8 )
 
 [node name="TileMap" type="TileMap" parent="."]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.4, 0.4 )
 tile_set = ExtResource( 3 )
 collision_use_kinematic = true
 format = 1
-tile_data = PoolIntArray( 327681, 0, 0, 327682, 0, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 2, 0, 393217, 3, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393224, 4, 0, 393225, 4, 0, 393226, 4, 0, 393227, 4, 0, 393228, 4, 0, 393229, 5, 0, 458753, 3, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458760, 4, 0, 458761, 4, 0, 458762, 4, 0, 458763, 4, 0, 458764, 4, 0, 458765, 5, 0, 524303, 0, 0, 524304, 1, 0, 524305, 1, 0, 589839, 6, 0, 589840, 7, 0, 589841, 8, 0, 655379, 0, 0, 655380, 1, 0, 655381, 2, 0, 720915, 6, 0, 720916, 7, 0, 720917, 8, 0, 786459, 0, 0, 786460, 1, 0, 786461, 2, 0, 851995, 6, 0, 851996, 7, 0, 851997, 8, 0, 1048584, 0, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 2, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 1, 0, 1048605, 1, 0, 1048606, 1, 0, 1048607, 1, 0, 1048608, 1, 0, 1114120, 6, 0, 1114121, 7, 0, 1114122, 7, 0, 1114123, 7, 0, 1114124, 7, 0, 1114125, 7, 0, 1114126, 7, 0, 1114127, 7, 0, 1114128, 7, 0, 1114129, 7, 0, 1114130, 7, 0, 1114131, 7, 0, 1114132, 7, 0, 1114133, 7, 0, 1114134, 8, 0 )
+tile_data = PoolIntArray( 262306, 11, 0, 393378, 10, 0, 524288, 10, 0, 524450, 10, 0, 589824, 10, 0, 655360, 10, 0, 655482, 21, 0, 655484, 11, 0, 655486, 20, 0, 655522, 10, 0, 720896, 10, 0, 786432, 10, 0, 786594, 10, 0, 851968, 10, 0, 917504, 10, 0, 917666, 10, 0, 983040, 10, 0, 983110, 11, 0, 983112, 11, 0, 983149, 21, 0, 983151, 11, 0, 983153, 11, 0, 983155, 20, 0, 1048576, 10, 0, 1048621, 21, 0, 1048623, 11, 0, 1048625, 20, 0, 1048714, 11, 0, 1048738, 10, 0, 1114112, 10, 0, 1114182, 10, 0, 1114184, 10, 0, 1114193, 11, 0, 1114195, 11, 0, 1114197, 11, 0, 1114199, 11, 0, 1114201, 11, 0, 1114203, 11, 0, 1114212, 13, 0, 1114214, 9, 0, 1179648, 10, 0, 1179704, 11, 0, 1179706, 11, 0, 1179708, 11, 0, 1179710, 11, 0, 1179712, 11, 0, 1179714, 11, 0, 1179716, 11, 0, 1179786, 10, 0, 1179788, 11, 0, 1179810, 10, 0, 1245254, 10, 0, 1245256, 10, 0, 1245265, 10, 0, 1245267, 10, 0, 1245269, 10, 0, 1245271, 10, 0, 1245273, 10, 0, 1245275, 10, 0, 1310722, 21, 0, 1310723, 21, 0, 1310724, 11, 0, 1310725, 11, 0, 1310726, 11, 0, 1310727, 11, 0, 1310728, 11, 0, 1310730, 11, 0, 1310732, 11, 0, 1310734, 11, 0, 1310736, 11, 0, 1310738, 11, 0, 1310740, 11, 0, 1310742, 11, 0, 1310744, 11, 0, 1310746, 11, 0, 1310748, 11, 0, 1310750, 11, 0, 1310752, 11, 0, 1310754, 11, 0, 1310756, 11, 0, 1310758, 11, 0, 1310776, 10, 0, 1310778, 10, 0, 1310780, 10, 0, 1310782, 10, 0, 1310784, 10, 0, 1310786, 10, 0, 1310788, 10, 0, 1310858, 10, 0, 1310860, 10, 0, 1310876, 11, 0, 1310878, 11, 0, 1310880, 11, 0, 1310882, 10, 0, 1376326, 10, 0, 1376328, 10, 0, 1376337, 10, 0, 1376339, 10, 0, 1376341, 10, 0, 1376343, 10, 0, 1376345, 10, 0, 1376347, 10, 0, 1441816, 10, 0, 1441818, 10, 0, 1441820, 10, 0, 1441822, 10, 0, 1441824, 10, 0, 1441826, 10, 0, 1441828, 10, 0, 1441830, 10, 0, 1441848, 10, 0, 1441850, 10, 0, 1441852, 10, 0, 1441854, 10, 0, 1441856, 10, 0, 1441858, 10, 0, 1441860, 10, 0, 1441862, 10, 0, 1441864, 10, 0, 1441873, 10, 0, 1441875, 10, 0, 1441877, 10, 0, 1441879, 10, 0, 1441881, 10, 0, 1441883, 10, 0, 1441930, 10, 0, 1441932, 10, 0, 1441934, 11, 0, 1441936, 11, 0, 1441938, 11, 0, 1441940, 11, 0, 1441946, 11, 0, 1441948, 10, 0, 1441950, 10, 0, 1441952, 10, 0, 1441954, 10, 0, 1572888, 10, 0, 1572890, 10, 0, 1572892, 10, 0, 1572894, 10, 0, 1572896, 10, 0, 1572898, 10, 0, 1572900, 10, 0, 1572902, 10, 0, 1572920, 10, 0, 1572922, 10, 0, 1572923, 10, 0, 1572924, 10, 0, 1572926, 10, 0, 1572928, 10, 0, 1572930, 10, 0, 1572932, 10, 0, 1572934, 10, 0, 1572936, 10, 0, 1572945, 10, 0, 1572947, 10, 0, 1572949, 10, 0, 1572951, 10, 0, 1572953, 10, 0, 1572955, 10, 0, 1573002, 10, 0, 1573004, 10, 0, 1573006, 10, 0, 1573008, 10, 0, 1573010, 10, 0, 1573012, 10, 0, 1573018, 10, 0, 1573019, 10, 0, 1573020, 10, 0, 1573022, 10, 0, 1573024, 10, 0, 1573026, 10, 0 )
 
 [node name="coins" type="Node2D" parent="."]
 
 [node name="coin" parent="coins" instance=ExtResource( 6 )]
-position = Vector2( 471, 476 )
+position = Vector2( 485, 468 )
 scale = Vector2( 0.0193295, 0.0193295 )
 
 [node name="coin2" parent="coins" instance=ExtResource( 6 )]
-position = Vector2( 562, 476 )
+position = Vector2( 572, 467 )
 scale = Vector2( 0.0193295, 0.0193295 )
 
 [node name="coin3" parent="coins" instance=ExtResource( 6 )]
-position = Vector2( 660, 476 )
+position = Vector2( 653, 469 )
 scale = Vector2( 0.0193295, 0.0193295 )
 
 [node name="coin4" parent="coins" instance=ExtResource( 6 )]
-position = Vector2( 657.172, 281.546 )
+position = Vector2( 1231.17, 361.546 )
 scale = Vector2( 0.0193295, 0.0193295 )
 
 [node name="coin5" parent="coins" instance=ExtResource( 6 )]
-position = Vector2( 524.236, 208.007 )
+position = Vector2( 1334.24, 265.007 )
 scale = Vector2( 0.0193295, 0.0193295 )
 
 [node name="coin6" parent="coins" instance=ExtResource( 6 )]
-position = Vector2( 343.956, 50.3795 )
+position = Vector2( 1516.96, 419.38 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="coin7" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 2707.96, 265.38 )
 scale = Vector2( 0.0193295, 0.0193295 )
 
 [node name="World_Complete" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4108.4, 486.279 )
 world_scene = "res://world2.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 280, 456 )
+position = Vector2( 248, 458 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 50, 15.762 )
+current = true
+limit_left = 52
+limit_right = 4200
+limit_bottom = 650
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.3
+drag_margin_right = 0.3
 
 [node name="Octopus" parent="." instance=ExtResource( 4 )]
-position = Vector2( 208, 40 )
+position = Vector2( 1655, 351.473 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="Area2D" type="Area2D" parent="Octopus"]
 
@@ -72,8 +94,16 @@ shape = SubResource( 1 )
 position = Vector2( 0, -8 )
 shape = SubResource( 2 )
 
+[node name="jatuh" type="Area2D" parent="."]
+position = Vector2( 2176.48, 732.563 )
+script = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="jatuh"]
+shape = SubResource( 3 )
+
 [node name="Life" parent="." instance=ExtResource( 5 )]
 
 [node name="Coinjml" parent="." instance=ExtResource( 7 )]
 
 [connection signal="body_entered" from="Octopus/Area2D" to="Octopus" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="jatuh" to="jatuh" method="_on_jatuh_body_entered"]
