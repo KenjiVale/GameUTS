@@ -11,7 +11,7 @@
 [ext_resource path="res://jatuh.gd" type="Script" id=9]
 [ext_resource path="res://bg/tree trans.png" type="Texture" id=10]
 [ext_resource path="res://bg/city shadow2.png" type="Texture" id=11]
-[ext_resource path="res://bg/city2.png" type="Texture" id=12]
+[ext_resource path="res://bg/city3.png" type="Texture" id=12]
 [ext_resource path="res://Mossy - FloatingPlatforms.png" type="Texture" id=13]
 [ext_resource path="res://bg/bg sky.png" type="Texture" id=14]
 [ext_resource path="res://Mossy - TileSet.png" type="Texture" id=15]
@@ -425,8 +425,8 @@ texture = ExtResource( 11 )
 motion_mirroring = Vector2( 6400, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2( 3113.52, 164.955 )
-scale = Vector2( 2, 2 )
+position = Vector2( 3275.73, 203.126 )
+scale = Vector2( 0.637975, 0.637975 )
 texture = ExtResource( 12 )
 
 [node name="TileMap" type="TileMap" parent="."]
