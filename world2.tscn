@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://tileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World_Complete.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Life.tscn" type="PackedScene" id=4]
+[ext_resource path="res://world2.gd" type="Script" id=5]
+[ext_resource path="res://Coinjml.tscn" type="PackedScene" id=6]
 
 [node name="Node" type="Node"]
+script = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.5, 0.5 )
@@ -25,3 +28,5 @@ world_scene = "res://world.tscn"
 position = Vector2( 72, 72 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 4 )]
+
+[node name="Coinjml" parent="." instance=ExtResource( 6 )]
