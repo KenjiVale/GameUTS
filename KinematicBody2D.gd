@@ -34,8 +34,6 @@ func get_input():
 #			if(benda.collider is RigidBody2D):
 #				benda.collider.apply_central_impulse(movement)
 		
-	
-
 func _physics_process(delta):
 	get_input()
 	velocity.y += gravity * delta
