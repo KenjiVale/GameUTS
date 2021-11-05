@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World_Complete.tscn" type="PackedScene" id=2]
@@ -23,6 +23,22 @@ radius = 56.0
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 48.0
+
+[sub_resource type="Animation" id=5]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2482.07, 449.612 ), Vector2( 2482.07, 200 ) ]
+}
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 2205.73, 40.0667 )
@@ -491,12 +507,16 @@ scale = Vector2( 0.0193295, 0.0193295 )
 position = Vector2( 3044.72, 163.818 )
 scale = Vector2( 0.0193295, 0.0193295 )
 
+[node name="coin14" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 6090.79, -138.222 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
 [node name="World_Complete" parent="." instance=ExtResource( 2 )]
 position = Vector2( 6255.22, -131.896 )
 world_scene = "res://world2.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 140.573, 550.525 )
+position = Vector2( 5845.35, -225.34 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -512,7 +532,7 @@ drag_margin_left = 0.3
 drag_margin_right = 0.3
 
 [node name="Octopus" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1655, 351.473 )
+position = Vector2( 2482.07, 200 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Area2D" type="Area2D" parent="Octopus"]
@@ -526,6 +546,10 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Octopus/KinematicBody2D"]
 position = Vector2( 0, -8 )
 shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Octopus"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 5 )
 
 [node name="jatuh" type="Area2D" parent="."]
 position = Vector2( 2176.48, 732.563 )

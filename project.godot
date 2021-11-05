@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 LifeCounter="*res://LifeCounter.gd"
 Coinjml="*res://Coinjml.gd"
 NewScript="*res://jumlahCOin.gd"
+VarPoint="*res://varPoint.gd"
 
 [display]
 

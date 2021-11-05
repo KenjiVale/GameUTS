@@ -20,5 +20,6 @@ func _ready():
 
 func _on_TambahPoint():
 	point += 10
+	$"/root/VarPoint".point = point
 	$Coinjml.UpdatePoint(point)
 	print(point) # Replace with function body.
