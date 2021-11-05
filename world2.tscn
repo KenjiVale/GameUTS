@@ -1,39 +1,662 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://tileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World_Complete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WinPorte.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Life.tscn" type="PackedScene" id=4]
 [ext_resource path="res://world2.gd" type="Script" id=5]
 [ext_resource path="res://Coinjml.tscn" type="PackedScene" id=6]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Mossy - FloatingPlatforms.png" type="Texture" id=8]
+[ext_resource path="res://bg/tree trans.png" type="Texture" id=9]
+[ext_resource path="res://Mossy - TileSet.png" type="Texture" id=10]
+[ext_resource path="res://bg/city shadow2.png" type="Texture" id=11]
+[ext_resource path="res://bg/bg sky.png" type="Texture" id=12]
+[ext_resource path="res://bg/city3.png" type="Texture" id=13]
+[ext_resource path="res://platformy.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Octopus.tscn" type="PackedScene" id=15]
+[ext_resource path="res://jatuh2.gd" type="Script" id=16]
+[ext_resource path="res://platformx.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Bull.tscn" type="PackedScene" id=18]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Mossy - FloatingPlatforms.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 96, 32, 288, 352 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [ Vector2( 2, 3 ), 256, Vector2( 2, 4 ), 260, Vector2( 2, 5 ), 260, Vector2( 2, 6 ), 260, Vector2( 2, 7 ), 4, Vector2( 3, 3 ), 320, Vector2( 3, 4 ), 325, Vector2( 3, 5 ), 325, Vector2( 3, 6 ), 325, Vector2( 3, 7 ), 5, Vector2( 4, 3 ), 320, Vector2( 4, 4 ), 325, Vector2( 4, 5 ), 325, Vector2( 4, 6 ), 325, Vector2( 4, 7 ), 5, Vector2( 5, 3 ), 320, Vector2( 5, 4 ), 325, Vector2( 5, 5 ), 325, Vector2( 5, 6 ), 325, Vector2( 5, 7 ), 5, Vector2( 6, 3 ), 64, Vector2( 6, 4 ), 65, Vector2( 6, 5 ), 65, Vector2( 6, 6 ), 65, Vector2( 6, 7 ), 1 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Mossy - FloatingPlatforms.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 544, 384, 384 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 0
+1/autotile/bitmask_flags = [ Vector2( 3, 3 ), 256, Vector2( 3, 4 ), 260, Vector2( 3, 5 ), 260, Vector2( 3, 6 ), 260, Vector2( 3, 7 ), 260, Vector2( 3, 8 ), 260, Vector2( 3, 9 ), 4, Vector2( 4, 3 ), 320, Vector2( 4, 4 ), 325, Vector2( 4, 5 ), 325, Vector2( 4, 6 ), 325, Vector2( 4, 7 ), 325, Vector2( 4, 8 ), 325, Vector2( 4, 9 ), 5, Vector2( 5, 3 ), 320, Vector2( 5, 4 ), 325, Vector2( 5, 5 ), 325, Vector2( 5, 6 ), 325, Vector2( 5, 7 ), 325, Vector2( 5, 8 ), 325, Vector2( 5, 9 ), 5, Vector2( 6, 3 ), 320, Vector2( 6, 4 ), 325, Vector2( 6, 5 ), 325, Vector2( 6, 6 ), 325, Vector2( 6, 7 ), 325, Vector2( 6, 8 ), 325, Vector2( 6, 9 ), 5, Vector2( 7, 3 ), 320, Vector2( 7, 4 ), 325, Vector2( 7, 5 ), 325, Vector2( 7, 6 ), 325, Vector2( 7, 7 ), 325, Vector2( 7, 8 ), 325, Vector2( 7, 9 ), 5, Vector2( 8, 3 ), 320, Vector2( 8, 4 ), 325, Vector2( 8, 5 ), 325, Vector2( 8, 6 ), 325, Vector2( 8, 7 ), 325, Vector2( 8, 8 ), 325, Vector2( 8, 9 ), 5, Vector2( 9, 3 ), 64, Vector2( 9, 4 ), 65, Vector2( 9, 5 ), 65, Vector2( 9, 6 ), 65, Vector2( 9, 7 ), 65, Vector2( 9, 8 ), 65, Vector2( 9, 9 ), 1 ]
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 32 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Mossy - FloatingPlatforms.png 2"
+2/texture = ExtResource( 8 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 480, 32, 992, 448 )
+2/tile_mode = 1
+2/autotile/bitmask_mode = 0
+2/autotile/bitmask_flags = [  ]
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 64, 64 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Mossy - FloatingPlatforms.png 3"
+3/texture = ExtResource( 8 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 1536, 1984, 448 )
+3/tile_mode = 1
+3/autotile/bitmask_mode = 1
+3/autotile/bitmask_flags = [  ]
+3/autotile/icon_coordinate = Vector2( 0, 0 )
+3/autotile/tile_size = Vector2( 64, 64 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Mossy - FloatingPlatforms.png 4"
+4/texture = ExtResource( 8 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 1536, 1984, 448 )
+4/tile_mode = 1
+4/autotile/bitmask_mode = 0
+4/autotile/bitmask_flags = [ Vector2( 2, 2 ), 256, Vector2( 2, 3 ), 260, Vector2( 2, 4 ), 260, Vector2( 2, 5 ), 4, Vector2( 3, 2 ), 320, Vector2( 3, 3 ), 325, Vector2( 3, 4 ), 325, Vector2( 3, 5 ), 5, Vector2( 4, 2 ), 320, Vector2( 4, 3 ), 325, Vector2( 4, 4 ), 325, Vector2( 4, 5 ), 5, Vector2( 5, 2 ), 320, Vector2( 5, 3 ), 325, Vector2( 5, 4 ), 325, Vector2( 5, 5 ), 5, Vector2( 6, 2 ), 320, Vector2( 6, 3 ), 325, Vector2( 6, 4 ), 325, Vector2( 6, 5 ), 5, Vector2( 7, 2 ), 320, Vector2( 7, 3 ), 325, Vector2( 7, 4 ), 325, Vector2( 7, 5 ), 5, Vector2( 8, 2 ), 320, Vector2( 8, 3 ), 325, Vector2( 8, 4 ), 325, Vector2( 8, 5 ), 5, Vector2( 9, 2 ), 320, Vector2( 9, 3 ), 325, Vector2( 9, 4 ), 325, Vector2( 9, 5 ), 5, Vector2( 10, 2 ), 320, Vector2( 10, 3 ), 325, Vector2( 10, 4 ), 325, Vector2( 10, 5 ), 5, Vector2( 11, 2 ), 320, Vector2( 11, 3 ), 325, Vector2( 11, 4 ), 325, Vector2( 11, 5 ), 5, Vector2( 12, 2 ), 320, Vector2( 12, 3 ), 325, Vector2( 12, 4 ), 325, Vector2( 12, 5 ), 5, Vector2( 13, 2 ), 320, Vector2( 13, 3 ), 325, Vector2( 13, 4 ), 325, Vector2( 13, 5 ), 5, Vector2( 14, 2 ), 320, Vector2( 14, 3 ), 325, Vector2( 14, 4 ), 325, Vector2( 14, 5 ), 5, Vector2( 15, 2 ), 320, Vector2( 15, 3 ), 325, Vector2( 15, 4 ), 325, Vector2( 15, 5 ), 5, Vector2( 16, 2 ), 320, Vector2( 16, 3 ), 325, Vector2( 16, 4 ), 325, Vector2( 16, 5 ), 5, Vector2( 17, 2 ), 320, Vector2( 17, 3 ), 325, Vector2( 17, 4 ), 325, Vector2( 17, 5 ), 5, Vector2( 18, 2 ), 320, Vector2( 18, 3 ), 325, Vector2( 18, 4 ), 325, Vector2( 18, 5 ), 5, Vector2( 19, 2 ), 320, Vector2( 19, 3 ), 325, Vector2( 19, 4 ), 325, Vector2( 19, 5 ), 5, Vector2( 20, 2 ), 320, Vector2( 20, 3 ), 325, Vector2( 20, 4 ), 325, Vector2( 20, 5 ), 5, Vector2( 21, 2 ), 320, Vector2( 21, 3 ), 325, Vector2( 21, 4 ), 325, Vector2( 21, 5 ), 5, Vector2( 22, 2 ), 320, Vector2( 22, 3 ), 325, Vector2( 22, 4 ), 325, Vector2( 22, 5 ), 5, Vector2( 23, 2 ), 320, Vector2( 23, 3 ), 325, Vector2( 23, 4 ), 325, Vector2( 23, 5 ), 5, Vector2( 24, 2 ), 320, Vector2( 24, 3 ), 325, Vector2( 24, 4 ), 325, Vector2( 24, 5 ), 5, Vector2( 25, 2 ), 320, Vector2( 25, 3 ), 325, Vector2( 25, 4 ), 325, Vector2( 25, 5 ), 5, Vector2( 26, 2 ), 320, Vector2( 26, 3 ), 325, Vector2( 26, 4 ), 325, Vector2( 26, 5 ), 5, Vector2( 27, 2 ), 320, Vector2( 27, 3 ), 325, Vector2( 27, 4 ), 325, Vector2( 27, 5 ), 5, Vector2( 28, 2 ), 320, Vector2( 28, 3 ), 325, Vector2( 28, 4 ), 325, Vector2( 28, 5 ), 5, Vector2( 29, 2 ), 64, Vector2( 29, 3 ), 65, Vector2( 29, 4 ), 65, Vector2( 29, 5 ), 1 ]
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 64, 64 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Mossy - FloatingPlatforms.png 5"
+5/texture = ExtResource( 8 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 512, 448, 448 )
+5/tile_mode = 1
+5/autotile/bitmask_mode = 0
+5/autotile/bitmask_flags = [ Vector2( 2, 2 ), 325, Vector2( 2, 3 ), 325, Vector2( 2, 4 ), 325, Vector2( 2, 5 ), 5, Vector2( 3, 2 ), 325, Vector2( 3, 3 ), 325, Vector2( 3, 4 ), 325, Vector2( 3, 5 ), 5, Vector2( 4, 2 ), 325, Vector2( 4, 3 ), 325, Vector2( 4, 4 ), 325, Vector2( 4, 5 ), 5, Vector2( 5, 2 ), 65, Vector2( 5, 3 ), 65, Vector2( 5, 4 ), 65, Vector2( 5, 5 ), 1 ]
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 64, 64 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Mossy - FloatingPlatforms.png 6"
+6/texture = ExtResource( 8 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 384, 1088, 1600, 448 )
+6/tile_mode = 2
+6/autotile/icon_coordinate = Vector2( 0, 0 )
+6/autotile/tile_size = Vector2( 64, 64 )
+6/autotile/spacing = 0
+6/autotile/occluder_map = [  ]
+6/autotile/navpoly_map = [  ]
+6/autotile/priority_map = [  ]
+6/autotile/z_index_map = [  ]
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Mossy - FloatingPlatforms.png 7"
+7/texture = ExtResource( 8 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 448, 512, 1152, 512 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Mossy - TileSet.png 8"
+8/texture = ExtResource( 10 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 512, 512 )
+8/tile_mode = 1
+8/autotile/bitmask_mode = 0
+8/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 260, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 260, Vector2( 0, 4 ), 260, Vector2( 0, 5 ), 260, Vector2( 0, 6 ), 260, Vector2( 0, 7 ), 260, Vector2( 0, 8 ), 260, Vector2( 0, 9 ), 260, Vector2( 0, 10 ), 260, Vector2( 1, 0 ), 320, Vector2( 1, 1 ), 325, Vector2( 1, 2 ), 325, Vector2( 1, 3 ), 325, Vector2( 1, 4 ), 325, Vector2( 1, 5 ), 325, Vector2( 1, 6 ), 325, Vector2( 1, 7 ), 325, Vector2( 1, 8 ), 325, Vector2( 1, 9 ), 325, Vector2( 1, 10 ), 325, Vector2( 2, 0 ), 320, Vector2( 2, 1 ), 325, Vector2( 2, 2 ), 325, Vector2( 2, 3 ), 325, Vector2( 2, 4 ), 325, Vector2( 2, 5 ), 325, Vector2( 2, 6 ), 325, Vector2( 2, 7 ), 325, Vector2( 2, 8 ), 325, Vector2( 2, 9 ), 325, Vector2( 2, 10 ), 325, Vector2( 3, 0 ), 320, Vector2( 3, 1 ), 325, Vector2( 3, 2 ), 325, Vector2( 3, 3 ), 325, Vector2( 3, 4 ), 325, Vector2( 3, 5 ), 325, Vector2( 3, 6 ), 325, Vector2( 3, 7 ), 325, Vector2( 3, 8 ), 325, Vector2( 3, 9 ), 325, Vector2( 3, 10 ), 325, Vector2( 4, 0 ), 320, Vector2( 4, 1 ), 325, Vector2( 4, 2 ), 325, Vector2( 4, 3 ), 325, Vector2( 4, 4 ), 325, Vector2( 4, 5 ), 325, Vector2( 4, 6 ), 325, Vector2( 4, 7 ), 325, Vector2( 4, 8 ), 325, Vector2( 4, 9 ), 325, Vector2( 4, 10 ), 325, Vector2( 5, 0 ), 320, Vector2( 5, 1 ), 325, Vector2( 5, 2 ), 325, Vector2( 5, 3 ), 325, Vector2( 5, 4 ), 325, Vector2( 5, 5 ), 325, Vector2( 5, 6 ), 325, Vector2( 5, 7 ), 325, Vector2( 5, 8 ), 325, Vector2( 5, 9 ), 325, Vector2( 5, 10 ), 325, Vector2( 6, 0 ), 320, Vector2( 6, 1 ), 325, Vector2( 6, 2 ), 325, Vector2( 6, 3 ), 325, Vector2( 6, 4 ), 325, Vector2( 6, 5 ), 325, Vector2( 6, 6 ), 325, Vector2( 6, 7 ), 325, Vector2( 6, 8 ), 325, Vector2( 6, 9 ), 325, Vector2( 6, 10 ), 325, Vector2( 7, 0 ), 320, Vector2( 7, 1 ), 325, Vector2( 7, 2 ), 325, Vector2( 7, 3 ), 325, Vector2( 7, 4 ), 325, Vector2( 7, 5 ), 325, Vector2( 7, 6 ), 325, Vector2( 7, 7 ), 325, Vector2( 7, 8 ), 325, Vector2( 7, 9 ), 325, Vector2( 7, 10 ), 325, Vector2( 8, 0 ), 320, Vector2( 8, 1 ), 325, Vector2( 8, 2 ), 325, Vector2( 8, 3 ), 325, Vector2( 8, 4 ), 325, Vector2( 8, 5 ), 325, Vector2( 8, 6 ), 325, Vector2( 8, 7 ), 325, Vector2( 8, 8 ), 325, Vector2( 8, 9 ), 325, Vector2( 8, 10 ), 325, Vector2( 9, 0 ), 320, Vector2( 9, 1 ), 325, Vector2( 9, 2 ), 325, Vector2( 9, 3 ), 325, Vector2( 9, 4 ), 325, Vector2( 9, 5 ), 325, Vector2( 9, 6 ), 325, Vector2( 9, 7 ), 325, Vector2( 9, 8 ), 325, Vector2( 9, 9 ), 325, Vector2( 9, 10 ), 325, Vector2( 10, 0 ), 320, Vector2( 10, 1 ), 325, Vector2( 10, 2 ), 325, Vector2( 10, 3 ), 325, Vector2( 10, 4 ), 325, Vector2( 10, 5 ), 325, Vector2( 10, 6 ), 325, Vector2( 10, 7 ), 325, Vector2( 10, 8 ), 325, Vector2( 10, 9 ), 325, Vector2( 10, 10 ), 325, Vector2( 11, 0 ), 64, Vector2( 11, 1 ), 65, Vector2( 11, 2 ), 65, Vector2( 11, 3 ), 65, Vector2( 11, 4 ), 65, Vector2( 11, 5 ), 65, Vector2( 11, 6 ), 65, Vector2( 11, 7 ), 65, Vector2( 11, 8 ), 65, Vector2( 11, 9 ), 65, Vector2( 11, 10 ), 65 ]
+8/autotile/icon_coordinate = Vector2( 0, 0 )
+8/autotile/tile_size = Vector2( 256, 256 )
+8/autotile/spacing = 0
+8/autotile/occluder_map = [  ]
+8/autotile/navpoly_map = [  ]
+8/autotile/priority_map = [  ]
+8/autotile/z_index_map = [  ]
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Mossy - TileSet.png 9"
+9/texture = ExtResource( 10 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 512, 0, 512, 512 )
+9/tile_mode = 1
+9/autotile/bitmask_mode = 0
+9/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 260, Vector2( 0, 2 ), 4, Vector2( 1, 0 ), 320, Vector2( 1, 1 ), 325, Vector2( 1, 2 ), 5, Vector2( 2, 0 ), 64, Vector2( 2, 1 ), 65, Vector2( 2, 2 ), 1 ]
+9/autotile/icon_coordinate = Vector2( 0, 0 )
+9/autotile/tile_size = Vector2( 512, 512 )
+9/autotile/spacing = 0
+9/autotile/occluder_map = [  ]
+9/autotile/navpoly_map = [  ]
+9/autotile/priority_map = [  ]
+9/autotile/z_index_map = [  ]
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Mossy - TileSet.png 10"
+10/texture = ExtResource( 10 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 2048, 2048, 1536, 1536 )
+10/tile_mode = 1
+10/autotile/bitmask_mode = 0
+10/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 260, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 260, Vector2( 0, 4 ), 260, Vector2( 0, 5 ), 4, Vector2( 1, 0 ), 320, Vector2( 1, 1 ), 69, Vector2( 1, 2 ), 321, Vector2( 1, 3 ), 69, Vector2( 1, 4 ), 321, Vector2( 1, 5 ), 5, Vector2( 2, 0 ), 320, Vector2( 2, 1 ), 261, Vector2( 2, 2 ), 324, Vector2( 2, 3 ), 261, Vector2( 2, 4 ), 324, Vector2( 2, 5 ), 5, Vector2( 3, 0 ), 320, Vector2( 3, 1 ), 69, Vector2( 3, 2 ), 321, Vector2( 3, 3 ), 69, Vector2( 3, 4 ), 321, Vector2( 3, 5 ), 5, Vector2( 4, 0 ), 320, Vector2( 4, 1 ), 261, Vector2( 4, 2 ), 324, Vector2( 4, 3 ), 261, Vector2( 4, 4 ), 324, Vector2( 4, 5 ), 5, Vector2( 5, 0 ), 64, Vector2( 5, 1 ), 65, Vector2( 5, 2 ), 65, Vector2( 5, 3 ), 65, Vector2( 5, 4 ), 65, Vector2( 5, 5 ), 1 ]
+10/autotile/icon_coordinate = Vector2( 0, 0 )
+10/autotile/tile_size = Vector2( 256, 256 )
+10/autotile/spacing = 0
+10/autotile/occluder_map = [  ]
+10/autotile/navpoly_map = [  ]
+10/autotile/priority_map = [  ]
+10/autotile/z_index_map = [  ]
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Mossy - TileSet.png 11"
+11/texture = ExtResource( 10 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 2048, 0, 1024, 1024 )
+11/tile_mode = 1
+11/autotile/bitmask_mode = 0
+11/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 260, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 4, Vector2( 1, 0 ), 320, Vector2( 1, 1 ), 69, Vector2( 1, 2 ), 321, Vector2( 1, 3 ), 5, Vector2( 2, 0 ), 320, Vector2( 2, 1 ), 261, Vector2( 2, 2 ), 324, Vector2( 2, 3 ), 5, Vector2( 3, 0 ), 64, Vector2( 3, 1 ), 65, Vector2( 3, 2 ), 65, Vector2( 3, 3 ), 1 ]
+11/autotile/icon_coordinate = Vector2( 0, 0 )
+11/autotile/tile_size = Vector2( 256, 256 )
+11/autotile/spacing = 0
+11/autotile/occluder_map = [  ]
+11/autotile/navpoly_map = [  ]
+11/autotile/priority_map = [  ]
+11/autotile/z_index_map = [  ]
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Mossy - TileSet.png 12"
+12/texture = ExtResource( 10 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 1024, 2048, 1024, 1024 )
+12/tile_mode = 1
+12/autotile/bitmask_mode = 0
+12/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 260, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 4, Vector2( 1, 0 ), 320, Vector2( 1, 1 ), 69, Vector2( 1, 2 ), 321, Vector2( 1, 3 ), 5, Vector2( 2, 0 ), 320, Vector2( 2, 1 ), 261, Vector2( 2, 2 ), 324, Vector2( 2, 3 ), 5, Vector2( 3, 0 ), 64, Vector2( 3, 1 ), 65, Vector2( 3, 2 ), 65, Vector2( 3, 3 ), 1 ]
+12/autotile/icon_coordinate = Vector2( 0, 0 )
+12/autotile/tile_size = Vector2( 256, 256 )
+12/autotile/spacing = 0
+12/autotile/occluder_map = [  ]
+12/autotile/navpoly_map = [  ]
+12/autotile/priority_map = [  ]
+12/autotile/z_index_map = [  ]
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "Mossy - TileSet.png 13"
+13/texture = ExtResource( 10 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 2048, 1024, 1024, 1024 )
+13/tile_mode = 1
+13/autotile/bitmask_mode = 0
+13/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 260, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 4, Vector2( 1, 0 ), 320, Vector2( 1, 1 ), 69, Vector2( 1, 2 ), 321, Vector2( 1, 3 ), 5, Vector2( 2, 0 ), 320, Vector2( 2, 1 ), 261, Vector2( 2, 2 ), 324, Vector2( 2, 3 ), 5, Vector2( 3, 0 ), 64, Vector2( 3, 1 ), 65, Vector2( 3, 2 ), 65, Vector2( 3, 3 ), 1 ]
+13/autotile/icon_coordinate = Vector2( 0, 0 )
+13/autotile/tile_size = Vector2( 256, 256 )
+13/autotile/spacing = 0
+13/autotile/occluder_map = [  ]
+13/autotile/navpoly_map = [  ]
+13/autotile/priority_map = [  ]
+13/autotile/z_index_map = [  ]
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "Mossy - TileSet.png 14"
+14/texture = ExtResource( 10 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 1536, 1536 )
+14/tile_mode = 1
+14/autotile/bitmask_mode = 0
+14/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 260, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 260, Vector2( 0, 4 ), 260, Vector2( 0, 5 ), 4, Vector2( 1, 0 ), 320, Vector2( 1, 1 ), 325, Vector2( 1, 2 ), 325, Vector2( 1, 3 ), 325, Vector2( 1, 4 ), 325, Vector2( 1, 5 ), 5, Vector2( 2, 0 ), 320, Vector2( 2, 1 ), 325, Vector2( 2, 2 ), 325, Vector2( 2, 3 ), 325, Vector2( 2, 4 ), 325, Vector2( 2, 5 ), 5, Vector2( 3, 0 ), 320, Vector2( 3, 1 ), 325, Vector2( 3, 2 ), 325, Vector2( 3, 3 ), 325, Vector2( 3, 4 ), 325, Vector2( 3, 5 ), 5, Vector2( 4, 0 ), 320, Vector2( 4, 1 ), 325, Vector2( 4, 2 ), 325, Vector2( 4, 3 ), 325, Vector2( 4, 4 ), 325, Vector2( 4, 5 ), 5, Vector2( 5, 0 ), 64, Vector2( 5, 1 ), 65, Vector2( 5, 2 ), 65, Vector2( 5, 3 ), 65, Vector2( 5, 4 ), 65, Vector2( 5, 5 ), 1 ]
+14/autotile/icon_coordinate = Vector2( 0, 0 )
+14/autotile/tile_size = Vector2( 256, 256 )
+14/autotile/spacing = 0
+14/autotile/occluder_map = [  ]
+14/autotile/navpoly_map = [  ]
+14/autotile/priority_map = [  ]
+14/autotile/z_index_map = [  ]
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "Mossy - TileSet.png 15"
+15/texture = ExtResource( 10 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 3584, 3584 )
+15/tile_mode = 1
+15/autotile/bitmask_mode = 0
+15/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 260, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 260, Vector2( 0, 4 ), 260, Vector2( 0, 5 ), 4, Vector2( 0, 8 ), 260, Vector2( 0, 9 ), 260, Vector2( 0, 10 ), 260, Vector2( 0, 11 ), 260, Vector2( 0, 12 ), 69, Vector2( 0, 13 ), 321, Vector2( 1, 0 ), 320, Vector2( 1, 1 ), 325, Vector2( 1, 2 ), 325, Vector2( 1, 3 ), 325, Vector2( 1, 4 ), 325, Vector2( 1, 5 ), 5, Vector2( 1, 6 ), 256, Vector2( 1, 7 ), 4, Vector2( 1, 8 ), 325, Vector2( 1, 9 ), 69, Vector2( 1, 10 ), 321, Vector2( 1, 11 ), 325, Vector2( 1, 12 ), 261, Vector2( 1, 13 ), 324, Vector2( 2, 0 ), 320, Vector2( 2, 1 ), 325, Vector2( 2, 2 ), 325, Vector2( 2, 3 ), 325, Vector2( 2, 4 ), 325, Vector2( 2, 5 ), 5, Vector2( 2, 6 ), 320, Vector2( 2, 7 ), 5, Vector2( 2, 8 ), 325, Vector2( 2, 9 ), 261, Vector2( 2, 10 ), 324, Vector2( 2, 11 ), 325, Vector2( 2, 12 ), 69, Vector2( 2, 13 ), 321, Vector2( 3, 0 ), 320, Vector2( 3, 1 ), 325, Vector2( 3, 2 ), 325, Vector2( 3, 3 ), 325, Vector2( 3, 4 ), 325, Vector2( 3, 5 ), 5, Vector2( 3, 6 ), 320, Vector2( 3, 7 ), 5, Vector2( 3, 8 ), 65, Vector2( 3, 9 ), 65, Vector2( 3, 10 ), 65, Vector2( 3, 11 ), 65, Vector2( 3, 12 ), 261, Vector2( 3, 13 ), 324, Vector2( 4, 0 ), 320, Vector2( 4, 1 ), 325, Vector2( 4, 2 ), 325, Vector2( 4, 3 ), 325, Vector2( 4, 4 ), 325, Vector2( 4, 5 ), 5, Vector2( 4, 6 ), 64, Vector2( 4, 7 ), 1, Vector2( 4, 8 ), 320, Vector2( 4, 9 ), 325, Vector2( 4, 10 ), 325, Vector2( 4, 11 ), 5, Vector2( 4, 12 ), 325, Vector2( 4, 13 ), 260, Vector2( 5, 0 ), 64, Vector2( 5, 1 ), 65, Vector2( 5, 2 ), 65, Vector2( 5, 3 ), 65, Vector2( 5, 4 ), 65, Vector2( 5, 5 ), 1, Vector2( 5, 8 ), 320, Vector2( 5, 9 ), 69, Vector2( 5, 10 ), 321, Vector2( 5, 11 ), 5, Vector2( 5, 12 ), 320, Vector2( 5, 13 ), 325, Vector2( 6, 0 ), 256, Vector2( 6, 1 ), 260, Vector2( 6, 2 ), 260, Vector2( 6, 3 ), 260, Vector2( 6, 4 ), 260, Vector2( 6, 5 ), 4, Vector2( 6, 6 ), 256, Vector2( 6, 7 ), 4, Vector2( 6, 8 ), 320, Vector2( 6, 9 ), 261, Vector2( 6, 10 ), 324, Vector2( 6, 11 ), 5, Vector2( 6, 12 ), 320, Vector2( 6, 13 ), 325, Vector2( 7, 0 ), 64, Vector2( 7, 1 ), 65, Vector2( 7, 2 ), 65, Vector2( 7, 3 ), 65, Vector2( 7, 4 ), 65, Vector2( 7, 5 ), 1, Vector2( 7, 6 ), 64, Vector2( 7, 7 ), 1, Vector2( 7, 8 ), 320, Vector2( 7, 9 ), 325, Vector2( 7, 10 ), 325, Vector2( 7, 11 ), 5, Vector2( 7, 12 ), 325, Vector2( 7, 13 ), 65, Vector2( 8, 0 ), 325, Vector2( 8, 1 ), 325, Vector2( 8, 2 ), 325, Vector2( 8, 3 ), 325, Vector2( 8, 4 ), 324, Vector2( 8, 5 ), 325, Vector2( 8, 6 ), 325, Vector2( 8, 7 ), 261, Vector2( 8, 8 ), 256, Vector2( 8, 9 ), 260, Vector2( 8, 10 ), 260, Vector2( 8, 11 ), 260, Vector2( 8, 12 ), 260, Vector2( 8, 13 ), 4, Vector2( 9, 0 ), 325, Vector2( 9, 1 ), 69, Vector2( 9, 2 ), 321, Vector2( 9, 3 ), 325, Vector2( 9, 4 ), 321, Vector2( 9, 5 ), 69, Vector2( 9, 6 ), 321, Vector2( 9, 7 ), 69, Vector2( 9, 8 ), 320, Vector2( 9, 9 ), 69, Vector2( 9, 10 ), 321, Vector2( 9, 11 ), 69, Vector2( 9, 12 ), 321, Vector2( 9, 13 ), 5, Vector2( 10, 0 ), 325, Vector2( 10, 1 ), 261, Vector2( 10, 2 ), 324, Vector2( 10, 3 ), 325, Vector2( 10, 4 ), 324, Vector2( 10, 5 ), 261, Vector2( 10, 6 ), 324, Vector2( 10, 7 ), 261, Vector2( 10, 8 ), 320, Vector2( 10, 9 ), 261, Vector2( 10, 10 ), 324, Vector2( 10, 11 ), 261, Vector2( 10, 12 ), 324, Vector2( 10, 13 ), 5, Vector2( 11, 0 ), 325, Vector2( 11, 1 ), 325, Vector2( 11, 2 ), 325, Vector2( 11, 3 ), 325, Vector2( 11, 4 ), 325, Vector2( 11, 5 ), 69, Vector2( 11, 6 ), 321, Vector2( 11, 7 ), 325, Vector2( 11, 8 ), 320, Vector2( 11, 9 ), 69, Vector2( 11, 10 ), 321, Vector2( 11, 11 ), 69, Vector2( 11, 12 ), 321, Vector2( 11, 13 ), 5, Vector2( 12, 0 ), 324, Vector2( 12, 1 ), 325, Vector2( 12, 2 ), 324, Vector2( 12, 3 ), 261, Vector2( 12, 4 ), 325, Vector2( 12, 5 ), 325, Vector2( 12, 6 ), 325, Vector2( 12, 7 ), 261, Vector2( 12, 8 ), 320, Vector2( 12, 9 ), 261, Vector2( 12, 10 ), 324, Vector2( 12, 11 ), 261, Vector2( 12, 12 ), 324, Vector2( 12, 13 ), 5, Vector2( 13, 0 ), 321, Vector2( 13, 1 ), 325, Vector2( 13, 2 ), 325, Vector2( 13, 3 ), 325, Vector2( 13, 4 ), 320, Vector2( 13, 5 ), 5, Vector2( 13, 6 ), 325, Vector2( 13, 7 ), 69, Vector2( 13, 8 ), 64, Vector2( 13, 9 ), 65, Vector2( 13, 10 ), 65, Vector2( 13, 11 ), 65, Vector2( 13, 12 ), 65, Vector2( 13, 13 ), 1 ]
+15/autotile/icon_coordinate = Vector2( 0, 0 )
+15/autotile/tile_size = Vector2( 256, 256 )
+15/autotile/spacing = 0
+15/autotile/occluder_map = [  ]
+15/autotile/navpoly_map = [  ]
+15/autotile/priority_map = [  ]
+15/autotile/z_index_map = [  ]
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 56.0
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 48.0
+
+[sub_resource type="Animation" id=4]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2275, 449.612 ), Vector2( 2275, 200 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 4107.4, 32.5835 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 50.0505, 8.77002 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 31.0898, 40.128 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "New Anim"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.001, 1, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3207.18, 530.429 ), Vector2( 3207.18, 530.429 ), Vector2( 3392.18, 530.429 ), Vector2( 3207.18, 530.429 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Area2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.9, 1, 2.9, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, 0 ), Vector2( -50, 0 ), Vector2( -40.734, 0 ), Vector2( -8.667, 0 ) ]
+}
 
 [node name="Node" type="Node"]
 script = ExtResource( 5 )
-
-[node name="TileMap" type="TileMap" parent="."]
-scale = Vector2( 0.5, 0.5 )
-tile_set = ExtResource( 1 )
-format = 1
-tile_data = PoolIntArray( 65561, 0, 0, 65562, 2, 0, 131097, 3, 0, 131098, 5, 0, 196633, 3, 0, 196634, 5, 0, 262146, 0, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262169, 3, 0, 262170, 5, 0, 327682, 3, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327705, 3, 0, 327706, 5, 0, 393218, 3, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 2, 0, 393241, 3, 0, 393242, 5, 0, 458754, 3, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458760, 4, 0, 458761, 4, 0, 458762, 4, 0, 458763, 4, 0, 458764, 5, 0, 458765, 1, 0, 458766, 1, 0, 458767, 1, 0, 458768, 1, 0, 458769, 1, 0, 458770, 1, 0, 458771, 1, 0, 458777, 3, 0, 458778, 5, 0, 524290, 3, 0, 524291, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 524295, 4, 0, 524296, 4, 0, 524297, 4, 0, 524298, 4, 0, 524299, 4, 0, 524300, 5, 0, 524313, 3, 0, 524314, 5, 0, 589826, 3, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 5, 0, 589849, 3, 0, 589850, 5, 0, 655362, 3, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0, 655371, 4, 0, 655372, 5, 0, 655385, 3, 0, 655386, 5, 0, 720898, 6, 0, 720899, 7, 0, 720900, 7, 0, 720901, 7, 0, 720902, 7, 0, 720903, 7, 0, 720904, 7, 0, 720905, 7, 0, 720906, 7, 0, 720907, 7, 0, 720908, 8, 0, 720918, 1, 0, 720919, 1, 0, 720920, 1, 0, 720921, 1, 0, 720922, 1, 0, 720923, 1, 0, 720924, 1, 0, 720925, 1, 0, 983069, 1, 0, 983070, 1, 0, 983071, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 1, 0, 1048605, 7, 0, 1048606, 7, 0, 1048607, 7, 0 )
 __meta__ = {
-"_edit_lock_": true
+"_edit_vertical_guides_": [ 2275.46 ]
 }
 
-[node name="World_Complete" parent="." instance=ExtResource( 3 )]
-position = Vector2( 880, 344 )
-scale = Vector2( 0.5, 0.5 )
-world_scene = "res://world.tscn"
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 72, 72 )
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0, 1 )
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3133.7, 158.228 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 6400, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 2837.71, 181.407 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 6400, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 3100.07, 171.683 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 6400, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 3275.73, 203.126 )
+scale = Vector2( 0.637975, 0.637975 )
+texture = ExtResource( 13 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 4 )]
 
 [node name="Coinjml" parent="." instance=ExtResource( 6 )]
 
+[node name="WinPort" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6092.21, 277.292 )
+
 [node name="coins2" type="Node2D" parent="."]
 scale = Vector2( 0.0136544, 0.0136544 )
 
 [node name="coin" parent="coins2" instance=ExtResource( 7 )]
-position = Vector2( 25930.8, 9554.18 )
+position = Vector2( 27854.3, 10655.7 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin2" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 63886.8, 23252.4 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin3" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 94353.3, 30429.5 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin4" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 93191, 41938.8 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin5" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 96562.5, 42403.8 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin6" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 100632, 42403.8 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin7" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 103422, 40078.8 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin8" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 107026, 43682.5 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin9" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 146436, 9620.06 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin10" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 184452, 9155.06 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin11" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 209331, 38183.1 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin12" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 268504, 17257 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin13" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 357786, 17838.3 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin14" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 385106, 10746.6 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="coin15" parent="coins2" instance=ExtResource( 7 )]
+position = Vector2( 428236, 19233.4 )
+scale = Vector2( 1.4477, 1.4477 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+scale = Vector2( 0.4, 0.4 )
+tile_set = ExtResource( 1 )
+collision_use_kinematic = true
+format = 1
+tile_data = PoolIntArray( 262145, 12, 0, 262146, 12, 0, 262147, 12, 0, 262148, 12, 0, 262149, 12, 0, 262150, 12, 0, 262151, 12, 0, 262152, 12, 0, 262153, 12, 0, 327687, 12, 0, 327688, 12, 0, 327689, 12, 0, 458761, 12, 0, 524297, 12, 0, 524298, 12, 0, 524299, 12, 0, 524300, 12, 0, 524301, 12, 0, 524302, 12, 0, 524303, 12, 0, 524304, 12, 0, 786626, 12, 0, 786627, 12, 0, 786628, 12, 0, 786629, 12, 0, 786630, 12, 0, 786631, 12, 0, 786632, 12, 0, 786657, 12, 0, 786658, 12, 0, 786659, 12, 0, 786660, 12, 0, 786661, 12, 0, 786662, 12, 0, 786663, 12, 0, 786664, 12, 0, 786665, 12, 0, 786666, 12, 0, 786667, 12, 0, 786668, 12, 0, 786669, 12, 0, 786670, 12, 0, 852162, 9, 0, 852163, 9, 0, 852164, 9, 0, 852165, 9, 0, 852166, 9, 0, 852167, 9, 0, 852168, 9, 0, 852193, 9, 0, 852194, 9, 0, 852195, 9, 0, 852196, 9, 0, 852197, 9, 0, 852198, 9, 0, 852199, 9, 0, 852200, 9, 0, 852201, 9, 0, 852202, 9, 0, 852203, 9, 0, 852204, 9, 0, 852205, 9, 0, 917535, 12, 0, 917536, 12, 0, 917537, 12, 0, 917538, 12, 0, 917539, 12, 0, 1048717, 12, 0, 1048718, 12, 0, 1048719, 12, 0, 1048720, 12, 0, 1048721, 12, 0, 1048722, 12, 0, 1048723, 12, 0, 1048724, 12, 0, 1048725, 12, 0, 1048726, 12, 0, 1048727, 12, 0, 1048728, 12, 0, 1048729, 12, 0, 1048730, 12, 0, 1048752, 12, 0, 1048753, 12, 0, 1048754, 12, 0, 1048755, 12, 0, 1048756, 12, 0, 1048757, 12, 0, 1048758, 12, 0, 1048759, 12, 0, 1048760, 12, 0, 1048761, 12, 0, 1048762, 12, 0, 1048763, 12, 0, 1114253, 9, 0, 1114254, 9, 0, 1114255, 9, 0, 1114256, 9, 0, 1114257, 9, 0, 1114258, 9, 0, 1114259, 9, 0, 1114260, 9, 0, 1114261, 9, 0, 1114262, 9, 0, 1114263, 9, 0, 1114264, 9, 0, 1114265, 9, 0, 1114266, 9, 0, 1114288, 9, 0, 1114289, 12, 0, 1114290, 12, 0, 1114291, 12, 0, 1114292, 12, 0, 1114293, 12, 0, 1114294, 12, 0, 1114295, 12, 0, 1114296, 12, 0, 1114297, 9, 0, 1114298, 9, 0, 1114299, 9, 0, 1179688, 12, 0, 1179689, 12, 0, 1179690, 12, 0, 1179691, 12, 0, 1179692, 12, 0, 1179693, 12, 0, 1179694, 12, 0, 1179695, 12, 0, 1179696, 12, 0, 1179697, 12, 0, 1179698, 12, 0, 1179699, 12, 0, 1179700, 12, 0, 1179701, 12, 0, 1179702, 12, 0, 1179703, 12, 0, 1245325, 12, 0, 1310760, 12, 0, 1310761, 12, 0, 1310762, 12, 0, 1310763, 12, 0, 1310764, 12, 0, 1310765, 12, 0, 1310766, 12, 0, 1310857, 12, 0, 1310858, 12, 0, 1310859, 12, 0, 1310860, 12, 0, 1376296, 12, 0, 1376297, 12, 0, 1376298, 12, 0, 1376299, 12, 0, 1376300, 12, 0, 1376301, 12, 0, 1376302, 12, 0, 1376393, 12, 0, 1441902, 12, 0, 1441903, 12, 0, 1441904, 12, 0, 1441905, 12, 0, 1441906, 12, 0, 1441907, 12, 0, 1441908, 12, 0, 1441909, 12, 0, 1441910, 12, 0, 1441911, 12, 0, 1441912, 12, 0, 1441914, 12, 0, 1441915, 12, 0, 1441916, 12, 0, 1441917, 12, 0, 1441918, 12, 0, 1441919, 12, 0, 1441920, 12, 0, 1441921, 12, 0, 1441922, 12, 0, 1441923, 12, 0, 1441924, 12, 0, 1441925, 12, 0, 1441926, 12, 0, 1441927, 12, 0, 1441928, 12, 0, 1441929, 12, 0, 1507368, 12, 0, 1507369, 12, 0, 1507370, 12, 0, 1507371, 12, 0, 1507372, 12, 0, 1507373, 12, 0, 1507374, 12, 0, 1507438, 9, 0, 1507439, 9, 0, 1507440, 9, 0, 1507441, 9, 0, 1507442, 9, 0, 1507443, 9, 0, 1507444, 9, 0, 1507445, 9, 0, 1507446, 9, 0, 1507447, 9, 0, 1507448, 12, 0, 1507449, 12, 0, 1507450, 12, 0, 1507451, 12, 0, 1507452, 12, 0, 1507453, 12, 0, 1507454, 12, 0, 1507455, 12, 0, 1507456, 9, 0, 1507457, 9, 0, 1507458, 9, 0, 1507459, 9, 0, 1507460, 9, 0, 1507461, 9, 0, 1507462, 9, 0, 1507463, 9, 0, 1507464, 9, 0, 1507465, 9, 0, 1572905, 12, 0, 1572906, 12, 0, 1572907, 12, 0, 1572908, 12, 0, 1572909, 12, 0, 1572910, 12, 0, 1572912, 12, 0, 1572913, 12, 0, 1572914, 12, 0, 1572915, 12, 0, 1572916, 12, 0, 1572917, 12, 0, 1572918, 12, 0, 1572919, 12, 0, 1572920, 12, 0, 1572921, 12, 0, 1572922, 12, 0, 1572923, 12, 0, 1572924, 12, 0, 1572925, 12, 0, 1572926, 12, 0, 1572927, 12, 0, 1572928, 12, 0, 1572929, 12, 0, 1572930, 12, 0, 1572931, 12, 0, 1572932, 12, 0, 1572933, 12, 0, 1572934, 12, 0, 1572935, 12, 0, 1572936, 12, 0, 1572974, 9, 0, 1572975, 9, 0, 1572976, 9, 0, 1572977, 9, 0, 1572978, 9, 0, 1572979, 9, 0, 1572980, 9, 0, 1572981, 9, 0, 1572982, 9, 0, 1572983, 9, 0, 1572984, 9, 0, 1572985, 9, 0, 1572986, 9, 0, 1572987, 9, 0, 1572989, 9, 0, 1638440, 12, 0, 1638442, 12, 0, 1638443, 12, 0, 1638444, 12, 0, 1638446, 12, 0, 1638447, 12, 0, 1638448, 12, 0, 1638449, 12, 0, 1638450, 12, 0, 1638451, 12, 0, 1638452, 12, 0, 1638453, 12, 0, 1638454, 12, 0, 1638455, 12, 0, 1638456, 12, 0, 1638457, 12, 0, 1638458, 12, 0, 1638459, 12, 0, 1638460, 12, 0, 1638461, 12, 0, 1638462, 12, 0, 1638463, 12, 0, 1638464, 12, 0, 1638465, 12, 0, 1638466, 12, 0, 1638467, 12, 0, 1638468, 12, 0, 1638469, 12, 0, 1638470, 12, 0, 1638471, 12, 0, 1638472, 12, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 169.737, 43.1446 )
+scale = Vector2( 1.14619, 1.14619 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 50, 15.762 )
+current = true
+limit_left = 52
+limit_top = -288
+limit_right = 9000
+limit_bottom = 665
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.3
+drag_margin_right = 0.3
+
+[node name="platform" parent="." instance=ExtResource( 17 )]
+position = Vector2( 4073.97, 436.893 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="TileMap3" type="TileMap" parent="."]
+position = Vector2( 0, -10 )
+scale = Vector2( 0.2, 0.2 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 256, 256 )
+format = 1
+tile_data = PoolIntArray( 131072, 15, 0, 131073, 15, 4, 131074, 15, 524298, 131075, 15, 524295, 131076, 15, 2, 131077, 15, 393223, 196608, 15, 327680, 196609, 15, 851980, 196610, 15, 458754, 196611, 15, 851979, 196612, 15, 720906, 196613, 15, 196613, 262148, 15, 589824, 262149, 15, 393227, 262150, 15, 524299, 262151, 15, 524293, 262152, 15, 524292, 262153, 15, 524301, 327684, 15, 327680, 327685, 15, 720901, 327686, 15, 720901, 327687, 15, 458755, 327688, 15, 720901, 327689, 15, 851981, 393313, 15, 524296, 393314, 15, 524297, 393315, 15, 4, 393316, 15, 393220, 393328, 15, 0, 393329, 15, 1, 393330, 15, 524293, 393331, 15, 393218, 393332, 15, 524293, 393333, 15, 524292, 393334, 15, 1, 393335, 15, 393223, 458767, 15, 393222, 458768, 15, 393218, 458769, 15, 524298, 458770, 15, 393220, 458849, 15, 327680, 458850, 15, 720902, 458851, 15, 720901, 458852, 15, 327687, 458864, 15, 327680, 458865, 15, 851977, 458866, 15, 720903, 458867, 15, 851980, 458868, 15, 327683, 458869, 15, 720901, 458870, 15, 327682, 458871, 15, 458759, 524303, 15, 458753, 524304, 15, 327684, 524305, 15, 720900, 524306, 15, 458759, 524358, 15, 524296, 524359, 15, 393218, 524360, 15, 524297, 524361, 15, 524298, 524362, 15, 524292, 524363, 15, 524295, 524364, 15, 524294, 524365, 15, 393223, 524376, 15, 6, 524377, 15, 524294, 524378, 15, 524299, 524379, 15, 524298, 524380, 15, 524294, 524381, 15, 2, 524382, 15, 5, 589844, 15, 524296, 589845, 15, 4, 589846, 15, 393218, 589847, 15, 524293, 589848, 15, 524292, 589849, 15, 524300, 589850, 15, 524300, 589851, 15, 393219, 589852, 15, 5, 589894, 15, 65542, 589895, 15, 65547, 589896, 15, 327692, 589897, 15, 524289, 589898, 15, 720898, 589899, 15, 851974, 589900, 15, 589828, 589901, 15, 589837, 589912, 15, 458758, 589913, 15, 851978, 589914, 15, 458754, 589915, 15, 720900, 589916, 15, 327681, 589917, 15, 327684, 589918, 15, 851981, 655380, 15, 65542, 655381, 15, 262147, 655382, 15, 65547, 655383, 15, 131085, 655384, 15, 851974, 655385, 15, 655367, 655386, 15, 65537, 655387, 15, 65540, 655388, 15, 131079, 655428, 15, 393217, 655429, 15, 393218, 655430, 15, 131084, 655431, 15, 327689, 655432, 15, 851979, 655433, 15, 720902, 655434, 15, 851980, 655435, 15, 851977, 655436, 15, 851977, 655437, 15, 458759, 720916, 15, 196614, 720917, 15, 720897, 720918, 15, 131073, 720919, 15, 196621, 720920, 15, 786439, 720921, 15, 524289, 720922, 15, 131085, 720923, 15, 65547, 720924, 15, 262151, 720951, 15, 6, 720952, 15, 1, 720953, 15, 524292, 720954, 15, 524295, 720955, 15, 2, 720956, 15, 524297, 720957, 15, 524292, 720958, 15, 1, 720959, 15, 4, 720960, 15, 524297, 720961, 15, 524298, 720962, 15, 393219, 720963, 15, 524295, 720964, 15, 655372, 720965, 15, 196616, 720966, 15, 10, 720967, 15, 262149, 786452, 15, 196608, 786453, 15, 262155, 786454, 15, 131080, 786455, 15, 8, 786456, 15, 327692, 786457, 15, 327692, 786458, 15, 196618, 786459, 15, 524289, 786460, 15, 262153, 786461, 15, 524298, 786462, 15, 393219, 786463, 15, 3, 786464, 15, 2, 786465, 15, 393219, 786466, 15, 524292, 786467, 15, 524297, 786468, 15, 393220, 786487, 15, 720904, 786488, 15, 327692, 786489, 15, 131080, 786490, 15, 262146, 786491, 15, 131076, 786492, 15, 10, 786493, 15, 196618, 786494, 15, 65547, 786495, 15, 131073, 786496, 15, 196610, 786497, 15, 393228, 786498, 15, 131085, 786499, 15, 589831, 786500, 15, 262148, 786501, 15, 65537, 786502, 15, 131080, 786503, 15, 720909, 851988, 15, 327680, 851989, 15, 851979, 851990, 15, 720901, 851991, 15, 851978, 851992, 15, 720901, 851993, 15, 851977, 851994, 15, 720902, 851995, 15, 458754, 851996, 15, 851978, 851997, 15, 851978, 851998, 15, 458755, 851999, 15, 458755, 852000, 15, 327681, 852001, 15, 851977, 852002, 15, 720901, 852003, 15, 458754, 852004, 15, 458756, 852023, 15, 327686, 852024, 15, 851977, 852025, 15, 327684, 852026, 15, 720901, 852027, 15, 327683, 852028, 15, 851978, 852029, 15, 851978, 852030, 15, 720901, 852031, 15, 720900, 852032, 15, 720900, 852033, 15, 458754, 852034, 15, 327683, 852035, 15, 458755, 852036, 15, 720903, 852037, 15, 327683, 852038, 15, 327683, 852039, 15, 458759, 1310747, 5, 0, 1310748, 5, 0, 1376275, 5, 0, 1376276, 5, 0, 1441810, 5, 0, 1703952, 1, 0, 1703953, 1, 0, 1703954, 1, 0 )
+
+[node name="Yplatform" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2003.92, 245.098 )
+scale = Vector2( 0.203571, 0.203571 )
+
+[node name="Yplatform2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2530.94, 245.098 )
+scale = Vector2( 0.203571, 0.203571 )
+
+[node name="Yplatform3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 5458.36, 247.926 )
+scale = Vector2( 0.203571, 0.203571 )
+
+[node name="Octopus" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2275, 244.905 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Area2D" type="Area2D" parent="Octopus"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Octopus/Area2D"]
+position = Vector2( 0, -8 )
+shape = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Octopus"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Octopus/KinematicBody2D"]
+position = Vector2( 0, -8 )
+shape = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Octopus"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 4 )
+
+[node name="jatuh2" type="Area2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jatuh2"]
+position = Vector2( 4070.56, 714.64 )
+shape = SubResource( 5 )
+
+[node name="Bull" parent="." instance=ExtResource( 18 )]
+position = Vector2( 3238.72, 530.429 )
+
+[node name="Area2D" type="Area2D" parent="Bull"]
+position = Vector2( -41.9092, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bull/Area2D"]
+position = Vector2( 25.1292, 15.8079 )
+shape = SubResource( 6 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Bull"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bull/KinematicBody2D"]
+position = Vector2( -0.33371, 0.67646 )
+shape = SubResource( 7 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Bull"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 8 )
+
+[connection signal="body_entered" from="Octopus/Area2D" to="Octopus" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="jatuh2" to="jatuh2" method="_on_jatuh2_body_entered"]
+[connection signal="body_entered" from="Bull/Area2D" to="Bull" method="_on_Area2D_body_entered"]

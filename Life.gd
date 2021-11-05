@@ -17,7 +17,8 @@ func _physics_process(delta):
 		$hrt2.hide()
 	if (LifeCounter.life == 0):
 #		$Sprite.hide()
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://Lose.tscn")
+#		get_tree().reload_current_scene()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

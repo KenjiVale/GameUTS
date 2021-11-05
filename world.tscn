@@ -516,7 +516,7 @@ position = Vector2( 6255.22, -131.896 )
 world_scene = "res://world2.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 117.779, 560.964 )
+position = Vector2( 193.285, 560.558 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -532,7 +532,7 @@ drag_margin_left = 0.3
 drag_margin_right = 0.3
 
 [node name="Octopus" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2482.07, 200 )
+position = Vector2( 2482.07, 449.612 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Area2D" type="Area2D" parent="Octopus"]
