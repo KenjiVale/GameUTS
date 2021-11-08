@@ -31,10 +31,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-anchor_right = 1.07
-anchor_bottom = 1.0
-margin_right = 1751.0
-margin_bottom = 1029.0
+margin_right = 1817.0
+margin_bottom = 1059.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 4 )
 stretch_mode = 7
@@ -66,6 +64,7 @@ focus_neighbour_bottom = NodePath("../startButton")
 custom_colors/font_color_focus = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.0509804, 0.431373, 0.376471, 1 )
+custom_colors/font_color_pressed = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Quit"
 
@@ -81,6 +80,7 @@ focus_neighbour_bottom = NodePath("../quitButton")
 custom_colors/font_color_focus = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.0509804, 0.431373, 0.376471, 1 )
+custom_colors/font_color_pressed = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "Restart"
 

@@ -25,18 +25,20 @@ size = 20
 font_data = SubResource( 4 )
 
 [node name="Control" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -984.0
+margin_bottom = -560.0
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-anchor_right = 1.07
-anchor_bottom = 1.0
-margin_right = 1751.0
-margin_bottom = 1029.0
+anchor_right = 26.907
+anchor_bottom = 16.035
+margin_right = 717.52
+margin_bottom = 427.6
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
 stretch_mode = 7
@@ -45,10 +47,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 311.151
-margin_top = 224.136
-margin_right = 730.151
-margin_bottom = 434.136
+anchor_right = 25.55
+anchor_bottom = 14.925
+margin_left = 333.778
+margin_top = 225.55
+margin_right = -269.222
+margin_bottom = -161.45
 custom_fonts/font = SubResource( 5 )
 text = "YOU WIN
 "
@@ -57,32 +61,34 @@ __meta__ = {
 }
 
 [node name="quitButton" parent="." instance=ExtResource( 1 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 317.0
+anchor_right = 25.599
+anchor_bottom = 15.0
+margin_left = 353.77
 margin_top = 336.0
-margin_right = 431.0
-margin_bottom = 361.0
+margin_right = -516.19
+margin_bottom = -199.0
 focus_neighbour_top = NodePath("../startButton")
 focus_neighbour_bottom = NodePath("../startButton")
 custom_colors/font_color_focus = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.0509804, 0.431373, 0.376471, 1 )
+custom_colors/font_color_pressed = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "Quit"
 
 [node name="startButton" parent="." instance=ExtResource( 1 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 518.0
+anchor_right = 25.65
+anchor_bottom = 14.975
+margin_left = 537.799
 margin_top = 336.0
-margin_right = 632.0
-margin_bottom = 361.0
+margin_right = -334.201
+margin_bottom = -198.0
 focus_neighbour_top = NodePath("../quitButton")
 focus_neighbour_bottom = NodePath("../quitButton")
 custom_colors/font_color_focus = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.0509804, 0.431373, 0.376471, 1 )
+custom_colors/font_color_pressed = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "Play Again"
 
