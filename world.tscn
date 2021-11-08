@@ -41,7 +41,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 4129.06, 40.0667 )
+extents = Vector2( 4761.22, 40.0667 )
 
 [sub_resource type="TileSet" id=5]
 0/name = "Mossy - FloatingPlatforms.png 0"
@@ -575,7 +575,7 @@ __meta__ = {
 }
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="jatuh"]
-position = Vector2( 1923.33, 0 )
+position = Vector2( 2555.49, 0 )
 shape = SubResource( 4 )
 
 [node name="Life" parent="." instance=ExtResource( 5 )]
