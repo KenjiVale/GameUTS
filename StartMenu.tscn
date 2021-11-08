@@ -49,9 +49,11 @@ margin_right = -427.728
 margin_bottom = -285.503
 focus_neighbour_top = NodePath("../quitButton")
 focus_neighbour_bottom = NodePath("../quitButton")
-custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_focus = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.0509804, 0.431373, 0.376471, 1 )
+custom_colors/font_color_pressed = Color( 0.0509804, 0.431373, 0.376471, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Play"
 
 [node name="quitButton" parent="." instance=ExtResource( 3 )]
@@ -63,9 +65,10 @@ margin_right = -428.435
 margin_bottom = -212.671
 focus_neighbour_top = NodePath("../startButton")
 focus_neighbour_bottom = NodePath("../startButton")
-custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_focus = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.0509804, 0.431373, 0.376471, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Quit"
 
 [connection signal="pressed" from="startButton" to="." method="_on_startButton_pressed"]

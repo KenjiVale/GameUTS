@@ -57,29 +57,31 @@ __meta__ = {
 [node name="quitButton" parent="." instance=ExtResource( 1 )]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 579.967
-margin_top = 345.452
-margin_right = 624.967
-margin_bottom = 370.452
+margin_left = 349.0
+margin_top = 348.0
+margin_right = 491.0
+margin_bottom = 394.0
 focus_neighbour_top = NodePath("../startButton")
 focus_neighbour_bottom = NodePath("../startButton")
-custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_focus = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.0509804, 0.431373, 0.376471, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Quit"
 
 [node name="startButton" parent="." instance=ExtResource( 1 )]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 408.25
-margin_top = 342.905
-margin_right = 456.25
-margin_bottom = 367.905
+margin_left = 539.0
+margin_top = 348.0
+margin_right = 682.0
+margin_bottom = 395.0
 focus_neighbour_top = NodePath("../quitButton")
 focus_neighbour_bottom = NodePath("../quitButton")
-custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_focus = Color( 0.0509804, 0.431373, 0.376471, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.0509804, 0.431373, 0.376471, 1 )
+custom_fonts/font = SubResource( 5 )
 text = "Restart"
 
 [connection signal="pressed" from="quitButton" to="." method="_on_quitButton_pressed"]
