@@ -13,9 +13,9 @@ script = ExtResource( 2 )
 [node name="Control" type="Control" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -1024.0
+margin_left = -1023.0
 margin_top = 32.0
-margin_right = -984.0
+margin_right = -983.0
 margin_bottom = 72.0
 __meta__ = {
 "_edit_group_": true,
@@ -34,10 +34,10 @@ __meta__ = {
 }
 
 [node name="point" type="Label" parent="Control/Panel"]
-margin_left = -9.53888
-margin_top = 7.73244
-margin_right = 30.4612
-margin_bottom = 21.7324
+margin_left = -4.08692
+margin_top = 9.95169
+margin_right = 35.9132
+margin_bottom = 23.9517
 rect_scale = Vector2( 1.01441, 1.72385 )
 text = "0"
 align = 2
