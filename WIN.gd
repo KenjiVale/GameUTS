@@ -8,6 +8,7 @@ extends Control
 
 func _ready():
 	$startButton.grab_focus()
+	$Label2.text = "Your Score : " + str($"/root/VarPoint".point)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
