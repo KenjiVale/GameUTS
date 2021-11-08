@@ -1,5 +1,6 @@
 extends Control
 
+
 func _ready():
 	$startButton.grab_focus()
 
@@ -9,3 +10,4 @@ func _on_startButton_pressed():
 
 func _on_quitButton_pressed():
 	get_tree().quit()
+	
