@@ -564,6 +564,7 @@ position = Vector2( 428236, 19233.4 )
 scale = Vector2( 1.4477, 1.4477 )
 
 [node name="TileMap2" type="TileMap" parent="."]
+visible = false
 scale = Vector2( 0.4, 0.4 )
 tile_set = ExtResource( 1 )
 collision_use_kinematic = true

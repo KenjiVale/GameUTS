@@ -511,6 +511,22 @@ scale = Vector2( 0.0193295, 0.0193295 )
 position = Vector2( 6090.79, -138.222 )
 scale = Vector2( 0.0193295, 0.0193295 )
 
+[node name="coin15" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 3402, -4.99998 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="coin16" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 3400, -108 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="coin17" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 4525, 69 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
+[node name="coin18" parent="coins" instance=ExtResource( 6 )]
+position = Vector2( 5536, -250 )
+scale = Vector2( 0.0193295, 0.0193295 )
+
 [node name="World_Complete" parent="." instance=ExtResource( 2 )]
 position = Vector2( 6255.22, -131.896 )
 world_scene = "res://world2.tscn"
